@@ -2,9 +2,16 @@ import {createRoot} from 'react-dom/client';
 
 import App from './components/app/App';
 
-const container=document.getElementById("root");
+import {ThemeProvider} from 'styled-components';
 
-const root=createRoot(container)
+import {defaultTheme} from './components/thems/default';
 
-root.render(<App />)
+const container = document.getElementById('root');
 
+const root = createRoot(container);
+
+root.render(
+  <ThemeProvider theme={defaultTheme}>
+    <App />
+  </ThemeProvider>
+);

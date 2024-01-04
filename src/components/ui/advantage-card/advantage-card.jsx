@@ -1,4 +1,4 @@
-import Title, {TitleSize} from '../title/title';
+import {Title, TitleSize} from '../title/title';
 
 import './style.css';
 
