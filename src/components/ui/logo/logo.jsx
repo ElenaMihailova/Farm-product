@@ -1,6 +1,6 @@
 import logo from "../../../assets/logo.svg";
 
-import {StyledLogo, Text} from './styled';
+import {StyledLogo, Text} from './styles';
 
 export default function Logo() {
   return (

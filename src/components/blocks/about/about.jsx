@@ -1,5 +1,5 @@
 import {Title, TitleSize} from '../../ui/title/title';
-import {StyledAbout, Text} from './styled';
+import {StyledAbout, Text} from './styles';
 
 function About() {
   return (

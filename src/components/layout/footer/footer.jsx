@@ -1,13 +1,12 @@
 import Logo from '../../ui/logo/logo';
-
-import './style.css';
+import {StyledFooter, StyledCopyright} from './styles';
 
 function Footer() {
   return (
-    <footer className='footer'>
+    <StyledFooter as='footer'>
       <Logo />
-      <span className='footer__copyright'>Created 2023</span>
-    </footer>
+      <StyledCopyright>Created 2023</StyledCopyright>
+    </StyledFooter>
   );
 }
 

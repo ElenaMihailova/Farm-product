@@ -1,27 +1,28 @@
 import AdvantageCard from '../../ui/advantage-card/advantage-card';
-import Button from '../../ui/button/button';
-import {Title, TitleSize} from '../../ui/title/title';
+import {TitleSize} from '../../ui/title/title';
 import CartIcon from '../../../assets/cart.png';
-import {Section, P} from '../../styled/index';
 
-import './style.css';
+import {StyledSection, StyledTitle, StyledButton} from './styles';
+import {Ul, Li} from '../../styled';
 
 function AdvantageList({features}) {
   return features && features.length ? (
-    <Section className='features'>
-      <Title size={TitleSize.MEDIUM}>Why are farm products better?</Title>
-      <ul className='features__list'>
+    <StyledSection>
+      <StyledTitle size={TitleSize.MEDIUM}>
+        Why are farm products better?
+      </StyledTitle>
+      <Ul isGridList>
         {features.map((feature) => (
-          <li  className="features__item" key={feature.id}>
+          <Li className='features__item' key={feature.id}>
             <AdvantageCard {...feature} />
-          </li>
+          </Li>
         ))}
-      </ul>
-      <Button>
+      </Ul>
+      <StyledButton>
         <img src={CartIcon} alt='/' />
         <span>Cart</span>
-      </Button>
-    </Section>
+      </StyledButton>
+    </StyledSection>
   ) : null;
 }
 

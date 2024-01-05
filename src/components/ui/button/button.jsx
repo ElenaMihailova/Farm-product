@@ -1,4 +1,4 @@
-import {StyledButton} from './styled';
+import {StyledButton} from './styles';
 
 const Button = ({children, link, maxWidth, className, onClick, ...props}) => {
   return (

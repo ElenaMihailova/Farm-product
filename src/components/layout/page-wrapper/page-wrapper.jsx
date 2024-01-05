@@ -2,16 +2,15 @@ import MainPage from '../../pages/main-page/main-page';
 import Footer from '../footer/footer';
 import Header from '../header/header';
 
-import "./style.css";
+import {Main} from './styles';
 
 function PageWrapper({features}) {
   return (
     <>
       <Header />
-      <main className='page-wrapper__main'>
+      <Main>
         <MainPage features={features} />
-      </main>
-
+      </Main>
       <Footer />
     </>
   );
