@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import {Img} from '../../styled/index';
 
 export const Image = styled(Img)`
-  width: 248px;
-  height: 248px;
+  width: 100%;
+  height: 100%;
   margin-right: 20px;
-  object-fit: contain;
+  object-fit: cover;
 `;
 
 export const Wrapper = styled.div`
@@ -27,3 +27,10 @@ export const Price = styled.span`
   line-height: 21px;
   background-color: ${(props) => props.theme.backgroundColorBlue};
 `;
+
+export const ImageWrapper=styled.div`
+  width: 248px;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-right: 20px;
+`

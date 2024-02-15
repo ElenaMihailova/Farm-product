@@ -1,6 +1,8 @@
-import styled from 'styled-components';
-import {Swiper, SwiperSlide} from 'swiper/react';
+import styled, {css} from 'styled-components';
+import {Swiper} from 'swiper/react';
+import checkboxSelect from '../../../assets/checkbox.svg';
 import 'swiper/css';
+import Panel from '../../ui/panel/panel';
 
 export const Section = styled.section`
   position: absolute;
@@ -21,7 +23,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ProductSwiper = styled(Swiper)`
-  width: 727px;
+  width: 65%;
   max-height: 80vh;
 
   .swiper-pagination {
@@ -31,4 +33,40 @@ export const ProductSwiper = styled(Swiper)`
   .swiper-slide {
     flex-shrink: 1;
   }
+`;
+
+export const CheckboxLabel = styled.span`
+  position: relative;
+  display: flex;
+  height: 56px;
+  font-size: 18px;
+  text-align: left;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    right: 0;
+    display: block;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    ${(props) =>
+      props.$isChecked
+        ? css`
+            background-color: #fc9b27;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-image: url(${checkboxSelect});
+            background-repeat: no-repeat;
+            background-position: center center;
+          `
+        : css`
+            background-color: ${props.theme.backgroundColorGray};
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          `}
+  }
+`;
+
+export const FilterWrapper = styled(Panel)`
+  flex-direction: column;
 `;

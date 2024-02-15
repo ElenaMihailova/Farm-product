@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import {Panel} from '../../ui/panel/panel';
 import {Title, TitleSize} from '../../ui/title/title';
 import Filter from '../../blocks/filter/filter';
@@ -9,15 +10,27 @@ import * as Styled from './styles';
 import ProductCart from '../../ui/product-cart/product-cart';
 
 function OrderPage({products}) {
+  const [selectProductIds, setSelectProductIds] = useState([]);
+
   return (
     <Styled.Section as='form'>
       <Styled.Wrapper>
-        <Panel marginBottom={20}>
+        <Styled.FilterWrapper marginBottom={20}>
           <Title as='h2' size={TitleSize.SMALL} marginBottom={12}>
             Choose products
           </Title>
-          <Filter types={category} />
-        </Panel>
+          <Filter
+            labelComponent={Styled.CheckboxLabel}
+            name={'select-products'}
+            isGridList={false}
+            types={products.map((product) => ({
+              value: product.id,
+              title: product.name,
+            }))}
+            selectValues={selectProductIds}
+            onChange={setSelectProductIds}
+          />
+        </Styled.FilterWrapper>
         <Panel>
           <Title as='h2' size={TitleSize.SMALL}>
             Make an order
