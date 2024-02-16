@@ -5,9 +5,9 @@ import 'swiper/css';
 import Panel from '../../ui/panel/panel';
 
 export const Section = styled.section`
-  position: absolute;
+  /* position: absolute;
   top: ${(props) => props.theme.headerHeight};
-  bottom: ${(props) => props.theme.footerHeight};
+  bottom: ${(props) => props.theme.footerHeight}; */
   display: flex;
   padding-top: 40px;
   padding-bottom: 0;
@@ -67,6 +67,6 @@ export const CheckboxLabel = styled.span`
   }
 `;
 
-export const FilterWrapper = styled(Panel)`
+export const PanelWrapper = styled(Panel)`
   flex-direction: column;
 `;

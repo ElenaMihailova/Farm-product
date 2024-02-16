@@ -1,7 +1,7 @@
-import MainPage from '../../pages/main-page/main-page';
+// import MainPage from '../../pages/main-page/main-page';
 import Footer from '../footer/footer';
 import Header from '../header/header';
-import OrderPage from '../../pages/order-page/order-page';
+import BuyPage from '../../pages/buy-page/buy-page';
 
 import {Main} from './styles';
 
@@ -11,7 +11,7 @@ function PageWrapper({products}) {
       <Header />
       <Main>
         {/* <MainPage features={features} /> */}
-        <OrderPage products={products} />
+        <BuyPage products={products} />
       </Main>
       <Footer />
     </>

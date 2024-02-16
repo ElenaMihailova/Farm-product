@@ -1,5 +1,5 @@
 import PageWrapper from '../layout/page-wrapper/page-wrapper';
-import advantagesInfo from '../../mocks/advantageInfo';
+// import advantagesInfo from '../../mocks/advantageInfo';
 import products from '../../mocks/products';
 
 import {GlobalStyle} from './styles';
