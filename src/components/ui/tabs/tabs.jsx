@@ -6,7 +6,7 @@ function Tabs({tabsList = [], maxContentHeiht}) {
   const [selectIndex, setSelectIndex] = useState(0); 
 
   return (
-    <div>
+    <div style={{marginTop: '10px'}}>
       <Styled.Header>
         {tabsList.map((tab, index) => (
           <Styled.TabListItem key={index}>

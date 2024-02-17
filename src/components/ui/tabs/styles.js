@@ -5,6 +5,7 @@ import Button from '../button/button';
 export const Header = styled(Ul)`
   display: flex;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 `;
 
 export const TabListItem = styled(Li)`
@@ -40,6 +41,6 @@ export const TabButton = styled(Button)`
 export const Content = styled.div`
   font-size: 14px;
   text-align: left;
-  max-height: ${(props) => props.$maxContentHeiht || 'none'};
+  height: ${(props) => props.$maxContentHeiht || 'none'};
   overflow-y: overlay;
 `;

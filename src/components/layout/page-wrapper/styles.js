@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  width: ${(props) => props.theme.pageWidth};
+  width: 100%;
   margin: 0 auto;
-  padding-bottom: 80px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding-top: ${(props) => props.theme.headerHeight};
+  padding-bottom: ${(props) => props.theme.footerHeight};
+  background-color: ${(props) => props.theme.backgroundColorGray};
 `;

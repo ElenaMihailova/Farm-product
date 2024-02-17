@@ -27,7 +27,7 @@ function ProductCart({product}) {
       </Styled.ImageWrapper>
       <Styled.Wrapper>
         <Title size={TitleSize.SMALL}>{product.name}</Title>
-        <Tabs tabsList={tabsList} maxContentHeiht='105px'/>
+        <Tabs tabsList={tabsList} maxContentHeiht='150px'  />
         <Styled.Price>
           {product.price} € /{product.weight} g.
         </Styled.Price>

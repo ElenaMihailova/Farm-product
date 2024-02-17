@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 import {Section} from '../../styled';
 
-export const StyledHeader=styled(Section)`
-  width: 1280px;
-  margin: 0 auto;
+export const Header = styled.div`
+  width: 100%;
+  height: ${(props) => props.theme.headerHeight};
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
   position: relative;
-  height: 80px;
+  background-color: ${(props) => props.theme.colorWhite};
+  z-index: 5;
+`;
+
+export const Wrapper = styled(Section)`
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 0;
   padding-bottom: 0;
-  justify-content: space-between;
-  background-color: ${(props) => props.theme.colorWhite};
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04),
-    0 0 1px rgba(0, 0, 0, 0.04);
-  align-items: center;
-  z-index: 5;
+  height: 100%;
 `;

@@ -3,7 +3,14 @@ import Price from '../price/price';
 
 import * as Styled from './styles';
 
-export default function Order({value, className, address, onChange, onClick}) {
+export default function Order({
+  value,
+  className,
+  address,
+  onChange,
+  onClick,
+  disabled,
+}) {
   return (
     <>
       <Styled.AddressInput
@@ -13,7 +20,9 @@ export default function Order({value, className, address, onChange, onClick}) {
       ></Styled.AddressInput>
       <Styled.PriceLabel>Total amount</Styled.PriceLabel>
       <Price className={className} value={value} />
-      <Button onClick={onClick}>CHECKOUT</Button>
+      <Button onClick={onClick} disabled={disabled}>
+        CHECKOUT
+      </Button>
     </>
   );
 }

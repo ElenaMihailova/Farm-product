@@ -38,8 +38,8 @@ function BuyPage({products}) {
     0
   );
 
-  return (
-    <Styled.Section as='form'>
+  return products && products.length ? (
+    <Styled.BuySection as='form'>
       <Styled.Wrapper>
         <Styled.PanelWrapper marginBottom={20}>
           <Title as='h2' size={TitleSize.SMALL} marginBottom={12}>
@@ -67,6 +67,7 @@ function BuyPage({products}) {
             onChange={(e) => setAddress(e.target.value)}
             value={fullPrice}
             onClick={handleBuyClick}
+            disabled={!(selectProductIds.length && address)}
           />
         </Styled.PanelWrapper>
       </Styled.Wrapper>
@@ -88,8 +89,8 @@ function BuyPage({products}) {
           </SwiperSlide>
         ))}
       </Styled.ProductSwiper>
-    </Styled.Section>
-  );
+    </Styled.BuySection>
+  ): ('The products were too good and they were snapped up.')
 }
 
 export default BuyPage;

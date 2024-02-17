@@ -8,6 +8,7 @@ const Section = styled.section`
   padding-right: ${(props) => props.theme.pagePadding};
   position: relative;
   box-sizing: border-box;
+  max-width: ${(props) => props.theme.pageWidth};
 `;
 
 export default Section;

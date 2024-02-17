@@ -3,16 +3,17 @@ import {Swiper} from 'swiper/react';
 import checkboxSelect from '../../../assets/checkbox.svg';
 import 'swiper/css';
 import Panel from '../../ui/panel/panel';
+import {Section} from '../../styled';
 
-export const Section = styled.section`
-  /* position: absolute;
-  top: ${(props) => props.theme.headerHeight};
-  bottom: ${(props) => props.theme.footerHeight}; */
+export const BuySection = styled(Section)`
   display: flex;
   padding-top: 40px;
   padding-bottom: 0;
-  background-color: ${(props) => props.theme.backgroundColorGray};
   max-width: ${(props) => props.theme.pageWidth};
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100%;
 `;
 
 export const Wrapper = styled.div`
@@ -24,7 +25,7 @@ export const Wrapper = styled.div`
 
 export const ProductSwiper = styled(Swiper)`
   width: 65%;
-  max-height: 80vh;
+  max-height: ${(props) => `calc(100vh - ${props.theme.headerHeight + props.theme.footerHeight}px)`};
 
   .swiper-pagination {
     display: none;
