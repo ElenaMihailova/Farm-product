@@ -7,7 +7,7 @@ function Footer() {
     <Styled.Footer as='footer'>
       <Styled.Wrapper>
         <Logo />
-        <Styled.Copyright>Created 2023</Styled.Copyright>
+        <Styled.Copyright>Created 2024</Styled.Copyright>
       </Styled.Wrapper>
     </Styled.Footer>
   );

@@ -1,18 +1,18 @@
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-export const StyledButton = styled.a`
+export const StyledButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 40px;
+  padding: 1rem 2rem;
   width: fit-content;
-  height: 60px;
-  background: ${(props) => props.theme.buttonColor};
+  background-color: ${(props) =>props.theme.panelBackgroundColor};
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: ${(props) => props.theme.colorWhite};
   font-weight: 400;
   font-size: ${(props) => props.theme.fontSizeDefault};
   line-height: 150%;
-  border: none;
   gap: 3%;
   border-radius: 10px;
 
@@ -23,5 +23,6 @@ export const StyledButton = styled.a`
   &:disabled {
     opacity: 0.5;
     box-shadow: none;
-    background-color: ${(props) => props.theme.buttonColor};}
+    background-color: ${(props) => props.theme.buttonColor};
+  }
 `;

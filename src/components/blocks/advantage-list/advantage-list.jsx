@@ -4,6 +4,7 @@ import CartIcon from '../../../assets/cart.png';
 
 import {StyledSection, StyledTitle, StyledButton} from './styles';
 import {Ul, Li} from '../../styled';
+import {AppRoute} from '../../../const';
 
 function AdvantageList({features}) {
   return features && features.length ? (
@@ -18,7 +19,7 @@ function AdvantageList({features}) {
           </Li>
         ))}
       </Ul>
-      <StyledButton>
+      <StyledButton path={AppRoute.CATALOG}>
         <img src={CartIcon} alt='/' />
         <span>Cart</span>
       </StyledButton>
