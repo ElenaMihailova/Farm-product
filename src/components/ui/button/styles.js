@@ -15,6 +15,8 @@ export const StyledButton = styled(Link)`
   line-height: 150%;
   gap: 3%;
   border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 
   &:hover,
   &:active {

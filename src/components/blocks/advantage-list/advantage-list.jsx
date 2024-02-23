@@ -1,6 +1,5 @@
 import AdvantageCard from '../../ui/advantage-card/advantage-card';
 import {TitleSize} from '../../ui/title/title';
-import CartIcon from '../../../assets/cart.png';
 
 import {StyledSection, StyledTitle, StyledButton} from './styles';
 import {Ul, Li} from '../../styled';
@@ -19,9 +18,8 @@ function AdvantageList({features}) {
           </Li>
         ))}
       </Ul>
-      <StyledButton path={AppRoute.CATALOG}>
-        <img src={CartIcon} alt='/' />
-        <span>Cart</span>
+      <StyledButton link={AppRoute.CATALOG}>
+        Cart
       </StyledButton>
     </StyledSection>
   ) : null;

@@ -9,6 +9,7 @@ const Section = styled.section`
   position: relative;
   box-sizing: border-box;
   max-width: ${(props) => props.theme.pageWidth};
+  margin: 0 auto;
 `;
 
 export default Section;
