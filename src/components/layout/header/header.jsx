@@ -1,5 +1,4 @@
 import Logo from '../../ui/logo/logo';
-import {AppRoute} from '../../../const';
 import Nav from '../nav/nav';
 
 import * as Styled from './styles';
